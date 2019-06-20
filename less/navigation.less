@@ -1,13 +1,16 @@
 // Navigation Styles here
-
+.outer-wrapper{
+	border-bottom: 2px dashed @navigation-border;
+	width:100%;
+}
 
 .navwrapper {
-	border-bottom: 2px dashed @navigation-border;
+	// border-bottom: 2px dashed @navigation-border;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
 	align-items: center;
-
+	max-width: 800px;
 
 	@media @mobile{
 		flex-flow: column;
