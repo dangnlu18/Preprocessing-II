@@ -1,22 +1,16 @@
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  margin: 2% 0%;
-}  
-
 .home {
 
   header{
     display: flex;
     flex-flow: column;
     margin:0px 0px 2% 0px;
+    border-bottom: 2px dashed @silver;
+
 
     img{
       margin-top: 0px;
       margin-bottom: 2%;
+      max-width: 800px;
     }
   }
 
@@ -27,31 +21,53 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
+    @media @mobile{
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+
+      
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
       }
     }
+
+
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      flex-flow: column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        width:100%;
+      }
     }
 
     .img-content {
@@ -64,6 +80,10 @@ header {
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -75,12 +95,21 @@ header {
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile{
+        width: 80%;
+      }
+
       .btn {
-        .btn-mixin(teal, 1.75rem);
+        .btn-mixin(teal, 1.5rem);
       }
     }
   }
