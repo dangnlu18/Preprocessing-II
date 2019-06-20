@@ -1,3 +1,13 @@
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -187,6 +197,10 @@ hr {
     flex-flow: column;
   }
 }
+.navwrapper h1 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
 .navbar {
   display: flex;
   flex-flow: row;
@@ -222,6 +236,8 @@ hr {
   flex-flow: column;
   margin: 0px 0px 2% 0px;
   border-bottom: 2px dashed #C0C0C0;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .home header img {
   margin-top: 0px;
